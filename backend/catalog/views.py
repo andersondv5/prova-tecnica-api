@@ -1,8 +1,8 @@
 from django.shortcuts import render
 
 from rest_framework import viewsets
-from models import Course, Discipline
-from serializers import CourseSerializer, DisciplineSerializer
+from .models import Course, Discipline
+from .serializers import CourseSerializer, DisciplineSerializer
 
 class CourseViewSet(viewsets.ModelViewSet):
     queryset = Course.objects.all()

@@ -6,7 +6,7 @@ WORKDIR /app
 COPY requirements.txt .
 
 RUN apt-get update \
-&& apt-get install -y build-essential libpq-dev gcc git --no-install-recommends \
+&& apt-get install -y build-essential libpq-dev gcc git netcat --no-install-recommends \
 && pip install --upgrade pip \
 && pip install -r requirements.txt \
 && apt-get remove -y build-essential gcc git \
